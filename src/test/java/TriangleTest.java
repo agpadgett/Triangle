@@ -24,18 +24,18 @@ public class TriangleTest{
   @Test
   public void triangleType_whenEquilateral_Equilateral(){
     Triangle testTriangle = new Triangle (1, 1, 1);
-    assertEquals("equilateral", testTriangle.triangleType());
+    assertEquals("an equilateral", testTriangle.triangleType());
   }
 
   @Test
   public void triangleType_whenIsoceles_Isoceles(){
     Triangle testTriangle = new Triangle (5, 5, 3);
-    assertEquals("isoceles", testTriangle.triangleType());
+    assertEquals("an isoceles", testTriangle.triangleType());
   }
 
   @Test
   public void triangleType_whenScalene_Scalene(){
     Triangle testTriangle = new Triangle (3, 4, 5);
-    assertEquals("scalene", testTriangle.triangleType());
+    assertEquals("a scalene", testTriangle.triangleType());
   }
 }

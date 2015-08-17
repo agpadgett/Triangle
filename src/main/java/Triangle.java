@@ -39,7 +39,7 @@ public class Triangle {
     if (mSideA == mSideB && mSideB == mSideC && mSideA == mSideC){
       triangleIs = "an equilateral";
     } else if (mSideA == mSideB || mSideA == mSideC || mSideB == mSideC){
-      triangleIs = "am isoceles";
+      triangleIs = "an isoceles";
     } else {
       triangleIs = "a scalene";
     }
