@@ -1,0 +1,16 @@
+#foreach ($rectangle in $myRectangles)
+
+<p><h3>Your triangle's first side is $myTriangle.getSideA()</h3></p>
+<p><h3>Your triangle's second side is $myTriangle.getSideB()</h3></p>
+<p><h3>Your triangle's third side is $myTriangle.getSideC()</h3></p>
+
+#if ($myTriangle.isTriangle())
+  <p><h3>You made a triangle</h3></p>
+#else
+  <p><h3>That's not a triangle</h3></p>
+
+#if ($myTriangle.triangleType("equilateral"))
+  <p><h3> It's an equilateral triangle</h3></p>
+#else
+  <p><h3> It's not an equilateral triangle</h3></p>
+  
