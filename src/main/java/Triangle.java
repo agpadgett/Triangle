@@ -18,7 +18,7 @@ public class Triangle {
   }
 
   public int getSideC(){
-    return mSideB;
+    return mSideC;
   }
 
   public boolean isTriangle(){
@@ -34,16 +34,16 @@ public class Triangle {
     return tri;
   }
 
-    public String triangleType(){
-      String triangleIs = "";
-      if (mSideA == mSideB && mSideB == mSideC && mSideA == mSideC){
-        triangleIs = "equilateral";
-      } else if (mSideA == mSideB || mSideA == mSideC || mSideB == mSideC){
-        triangleIs = "isoceles";
-      } else {
-        triangleIs = "scalene";
-      }
-
-      return triangleIs;
+  public String triangleType(){
+    String triangleIs = "";
+    if (mSideA == mSideB && mSideB == mSideC && mSideA == mSideC){
+      triangleIs = "an equilateral";
+    } else if (mSideA == mSideB || mSideA == mSideC || mSideB == mSideC){
+      triangleIs = "am isoceles";
+    } else {
+      triangleIs = "a scalene";
     }
+
+  return triangleIs;
+ }
 }

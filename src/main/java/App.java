@@ -6,15 +6,15 @@ import static spark.Spark.*;
 
 public class App {
   public static void main(String[] args){
-    //staticFileLocation("/public");
+    staticFileLocation("/public");
     String layout = "templates/layout.vtl";
 
     get("/", (request, response) ->{
       HashMap<String,Object> model = new HashMap<String, Object>();
 
-      model.put("template1", "templates/home.vtl");
+      model.put("template", "templates/home.vtl");
       return new ModelAndView(model, layout);
-    } new VelocityTemplateEngine());
+    }, new VelocityTemplateEngine());
 
     get("/triangle", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
@@ -22,7 +22,7 @@ public class App {
       int sideB = Integer.parseInt(request.queryParams("sideB"));
       int sideC = Integer.parseInt(request.queryParams("sideC"));
 
-      Triangle myTriangle = newTriangle(sideA, sideB, sideC);
+      Triangle myTriangle = new Triangle(sideA, sideB, sideC);
       model.put("myTriangle", myTriangle);
 
       model.put("template", "templates/triangle.vtl");
